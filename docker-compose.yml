@@ -1,0 +1,18 @@
+services:
+  ubuntu1:
+    build:
+      context: ./ssh-containers
+    container_name: ub1
+    hostname: ub1
+    ports:
+      - "2222:22"
+      - "2282:80"
+
+  ubuntu2:
+    build:
+      context: ./ssh-containers
+    container_name: ub2
+    hostname: ub2
+    ports:
+      - "2223:22"
+      - "2283:80"
