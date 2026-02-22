@@ -69,3 +69,6 @@ git add .github/workflows/lint.yml
 git commit -m 'fix lint.yml'
 git push
 ```
+
+В итоге получил заветные зелёные галочки
+![final](./pics/final.png)
