@@ -52,6 +52,17 @@ git push
 #L2 - это line 2, как оказалось
 ![L2](./pics/L2.png)
 
+**Use FQCN for builtin module actions (apt)**  
+FQCN - это Fully Qualified Collection Name  
+вместо apt  
+рекомендуют ипользовать <коллекция>.<подраздел>.<модуль>.  
+Для встроенных модулей Ansible это обычно ansible.builtin.<модуль>.
+
+**Package installs should not use latest**  
+если указываем **state: latest**, то риск невоспроизводимости  
+лучше указать конкретную версию nginx или **state: present**  
+state: present - будет утановлена последняя версия и в дальнейшем не будет обновлятся.
+
 поправил .github/workflows/lint.yml
 ```
 git add .github/workflows/lint.yml 

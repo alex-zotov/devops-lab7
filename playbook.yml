@@ -2,8 +2,8 @@
   hosts: webservers
   remote_user: runner
   become: true
-  become_method: sudo
-  gather_facts: no
+  become_method: ansible.builtin.sudo
+  gather_facts: false
 
   vars:
     sites:
@@ -12,4 +12,4 @@
       - "mehmat.ru"
 
   roles:
-    - nginx-vhosts
+    - nginx_vhosts
