@@ -52,6 +52,15 @@ git push
 #L2 - это line 2, как оказалось
 ![L2](./pics/L2.png)
 
+поправил .github/workflows/lint.yml
+```
+git add .github/workflows/lint.yml 
+git commit -m 'fix lint.yml'
+git push
+```
+
+Отправил в гит все файлы ansible
+
 **Use FQCN for builtin module actions (apt)**  
 FQCN - это Fully Qualified Collection Name  
 вместо apt  
@@ -61,14 +70,7 @@ FQCN - это Fully Qualified Collection Name
 **Package installs should not use latest**  
 если указываем **state: latest**, то риск невоспроизводимости  
 лучше указать конкретную версию nginx или **state: present**  
-state: present - будет утановлена последняя версия и в дальнейшем не будет обновлятся.
-
-поправил .github/workflows/lint.yml
-```
-git add .github/workflows/lint.yml 
-git commit -m 'fix lint.yml'
-git push
-```
+state: present - будет установлена последняя версия и в дальнейшем не будет обновлятся.
 
 В итоге получил заветные зелёные галочки
 ![final](./pics/final.png)
